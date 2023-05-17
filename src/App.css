@@ -26,6 +26,7 @@
 }
 .dice {
   max-width: 30%;
+  cursor: pointer;
 }
 .dice-pool {
   width: 90%;

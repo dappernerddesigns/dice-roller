@@ -7,7 +7,7 @@ export const PlayArea = () => {
   const [dice, setDice] = useState([]);
   const [rolled, setRolled] = useState(false);
   const whichDie = (die) => {
-    const imgStr = `../src/assets/${die}.png`;
+    const imgStr = `./src/assets/${die}.png`;
     const dieNum = die.split("");
     dieNum.shift();
     const dieValue = dieNum.join("");
