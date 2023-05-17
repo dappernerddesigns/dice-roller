@@ -7,7 +7,7 @@ export const Roller = ({ dice, setDice, rolled, setRolled }) => {
     let total = 0;
 
     dice.forEach((die) => {
-      total += die.dice;
+      total += die.diceRoll;
     });
     setTotal(total);
     setRolled(true);

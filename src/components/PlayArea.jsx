@@ -7,7 +7,6 @@ export const PlayArea = () => {
   const [dice, setDice] = useState([]);
   const [rolled, setRolled] = useState(false);
   const whichDie = (die) => {
-    const imgStr = `./src/assets/${die}.png`;
     const dieNum = die.split("");
     dieNum.shift();
     const dieValue = dieNum.join("");
@@ -16,7 +15,7 @@ export const PlayArea = () => {
     const dieRandom = Math.floor(Math.random() * value) + 1;
 
     setDice((currItems) => {
-      return [...currItems, { img: imgStr, dice: dieRandom }];
+      return [...currItems, { dice: dieValue, diceRoll: dieRandom }];
     });
   };
   return (
