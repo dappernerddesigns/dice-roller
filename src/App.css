@@ -1,0 +1,54 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.dice-wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid white;
+}
+.rolled {
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.dice-pool-dice {
+  max-width: 70%;
+}
+.dice {
+  max-width: 30%;
+}
+.dice-pool {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.result {
+  justify-self: flex-end;
+}
+@media all and (min-width: 1300px) {
+  .dice {
+    max-width: 16%;
+  }
+
+  .dice-pool-dice {
+    width: 90%;
+  }
+  .rolled {
+    width: 10%;
+  }
+}
