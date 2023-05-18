@@ -41,7 +41,11 @@
 .result {
   justify-self: flex-end;
 }
-@media all and (min-width: 1300px) {
+
+.disabled {
+  pointer-events: none;
+}
+@media all and (min-width: 1000px) {
   .dice {
     max-width: 16%;
   }

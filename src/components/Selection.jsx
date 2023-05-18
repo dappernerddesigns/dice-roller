@@ -5,7 +5,15 @@ import d10 from "../assets/d10.png";
 import d12 from "../assets/d12.png";
 import d20 from "../assets/d20.png";
 
-export const Selection = ({ dice, rolled }) => {
+export const Selection = ({ dice, setDice }) => {
+  const removeDice = (die) => {
+    setDice((currDice) => {
+      return currDice.filter((dice) => {
+        return dice !== die;
+      });
+    });
+  };
+
   const imagePaths = {
     4: d4,
     6: d6,
@@ -17,12 +25,17 @@ export const Selection = ({ dice, rolled }) => {
   return (
     <>
       <div className="dice-pool">
+        {dice.length ? (
+          <p>To remove a dice click on a dice in the pool below</p>
+        ) : null}
         {dice.map((die, index) => {
-          console.log(die);
           return (
             <div className="rolled" key={index}>
-              <img src={imagePaths[die.dice]} className="dice-pool-dice" />
-              {rolled ? <h3 className="result">{die.diceRoll}</h3> : null}
+              <img
+                src={imagePaths[die.dice]}
+                className="dice-pool-dice"
+                onClick={() => removeDice(die)}
+              />
             </div>
           );
         })}
